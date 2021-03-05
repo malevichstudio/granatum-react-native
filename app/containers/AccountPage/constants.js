@@ -1,0 +1,57 @@
+const prefix = 'account';
+
+export const GET_PROJECTS_REQUEST = `${prefix}/GET_PROJECTS_REQUEST`;
+export const GET_PROJECTS_SUCCESS = `${prefix}/GET_PROJECTS_SUCCESS`;
+export const GET_PROJECTS_FAILURE = `${prefix}/GET_PROJECTS_FAILURE`;
+
+export const GET_PROJECT_REQUEST = `${prefix}/GET_PROJECT_REQUEST`;
+export const GET_PROJECT_SUCCESS = `${prefix}/GET_PROJECT_SUCCESS`;
+export const GET_PROJECT_FAILURE = `${prefix}/GET_PROJECT_FAILURE`;
+
+export const GET_COURSES_REQUEST = `${prefix}/GET_COURSES_REQUEST`;
+export const GET_COURSES_SUCCESS = `${prefix}/GET_COURSES_SUCCESS`;
+export const GET_COURSES_FAILURE = `${prefix}/GET_COURSES_FAILURE`;
+
+export const GET_COURSE_REQUEST = `${prefix}/GET_COURSE_REQUEST`;
+export const GET_COURSE_SUCCESS = `${prefix}/GET_COURSE_SUCCESS`;
+export const GET_COURSE_FAILURE = `${prefix}/GET_COURSE_FAILURE`;
+
+export const GET_SESSIONS_REQUEST = `${prefix}/GET_SESSIONS_REQUEST`;
+export const GET_SESSIONS_SUCCESS = `${prefix}/GET_SESSIONS_SUCCESS`;
+export const GET_SESSIONS_FAILURE = `${prefix}/GET_SESSIONS_FAILURE`;
+
+export const ENTER_PROJECT = `${prefix}/ENTER_PROJECT`;
+export const ENTER_PROJECTS = `${prefix}/ENTER_PROJECTS`;
+export const LEAVE_PROJECTS = `${prefix}/LEAVE_PROJECTS`;
+export const ENTER_COURSE = `${prefix}/ENTER_COURSE`;
+export const SET_ACTIVE_PROJECT = `${prefix}/SET_ACTIVE_PROJECT`;
+export const SET_ACTIVE_COURSE = `${prefix}/SET_ACTIVE_COURSE`;
+
+export const CREATE_PROJECT_REQUEST = `${prefix}/CREATE_PROJECT_REQUEST`;
+export const CREATE_PROJECT_FAILURE = `${prefix}/CREATE_PROJECT_FAILURE`;
+export const CREATE_PROJECT_SUCCESS = `${prefix}/CREATE_PROJECT_SUCCESS`;
+export const CREATE_PROJECT_RECEIVE = `${prefix}/CREATE_PROJECT_RECEIVE`;
+
+export const UPDATE_PROJECT_REQUEST = `${prefix}/UPDATE_PROJECT_REQUEST`;
+export const UPDATE_PROJECT_FAILURE = `${prefix}/UPDATE_PROJECT_FAILURE`;
+export const UPDATE_PROJECT_RECEIVE = `${prefix}/UPDATE_PROJECT_RECEIVE`;
+
+export const JOIN_PROJECT_RECEIVE = `${prefix}/JOIN_PROJECT_RECEIVE`;
+export const LEAVE_PROJECT_SUCCESS = `${prefix}/LEAVE_PROJECT_SUCCESS`;
+export const LEAVE_PROJECT_RECEIVE = `${prefix}/LEAVE_PROJECT_RECEIVE`;
+
+export const REMOVE_PROJECT_REQUEST = `${prefix}/REMOVE_PROJECT_REQUEST`;
+export const REMOVE_PROJECT_FAILURE = `${prefix}/REMOVE_PROJECT_FAILURE`;
+export const REMOVE_PROJECT_RECEIVE = `${prefix}/REMOVE_PROJECT_RECEIVE`;
+
+export const CREATE_COURSE_RECEIVE = `${prefix}/CREATE_COURSE_RECEIVE`;
+export const UPDATE_COURSE_RECEIVE = `${prefix}/UPDATE_COURSE_RECEIVE`;
+export const DELETE_COURSE_RECEIVE = `${prefix}/DELETE_COURSE_RECEIVE`;
+
+export const REMOVE_SESSION_RECEIVE = `${prefix}/REMOVE_SESSION_RECEIVE`;
+
+export const UPDATE_SESSION_RECEIVE = `${prefix}/UPDATE_SESSION_RECEIVE`;
+
+export const SESSION_NOTIFICATIONS_RECEIVE = `${prefix}/SESSION_NOTIFICATIONS_RECEIVE`;
+export const SORT_SESSION_RECEIVE = `${prefix}/SORT_SESSION_RECEIVE`;
+export const CREATE_SESSION_RECEIVE = `${prefix}/CREATE_SESSION_RECEIVE`;

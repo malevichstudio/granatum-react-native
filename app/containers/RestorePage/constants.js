@@ -1,0 +1,9 @@
+const prefix = 'Restore';
+
+export const RESTORE_PASSWORD_REQUEST = `${prefix}/RESTORE_PASSWORD_REQUEST`;
+export const RESTORE_PASSWORD_SUCCESS = `${prefix}/RESTORE_PASSWORD_SUCCESS`;
+export const RESTORE_PASSWORD_FAILURE = `${prefix}/RESTORE_PASSWORD_FAILURE`;
+
+export const CHECK_TOKEN_REQUEST = `${prefix}/CHECK_TOKEN_REQUEST`;
+export const CHECK_TOKEN_SUCCESS = `${prefix}/CHECK_TOKEN_SUCCESS`;
+export const CHECK_TOKEN_FAILURE = `${prefix}/CHECK_TOKEN_FAILURE`;

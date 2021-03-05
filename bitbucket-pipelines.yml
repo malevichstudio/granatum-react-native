@@ -1,0 +1,46 @@
+image: atlassian/default-image:latest
+
+definitions:
+  steps:
+    - step: &build
+        name: build
+        image: reactnativecommunity/react-native-android:1.0.5
+        script:
+          - npm i -g envinfo && envinfo
+          - yarn install
+          - cd android && chmod +x gradlew
+          - ./gradlew assembleRelease
+          - curl -X POST "https://${BB_NAME}:${BB_AUTH_STRING}@api.bitbucket.org/2.0/repositories/${BITBUCKET_REPO_OWNER}/${BITBUCKET_REPO_SLUG}/downloads" --form files=@"app/build/outputs/apk/release/app-release.apk;filename=${BITBUCKET_BRANCH/\//-}.apk"
+    - step: &notify
+        name: notify
+        script:
+          - chmod +x sendbuildstatustoslack.sh && ./sendbuildstatustoslack.sh
+
+pipelines:
+  default:
+    - step: *build
+    - step: *notify
+    - step:
+        name: Deploy to feature
+        deployment: feature
+        script:
+          - echo "Deploying to feature environment"
+
+  branches:
+    master:
+      - step: *build
+      - step: *notify
+      - step:
+          name: Deploy to production
+          deployment: production
+          script:
+            - echo "Deploying to production environment"
+
+    develop:
+      - step: *build
+      - step: *notify
+      - step:
+          name: Deploy to testing
+          deployment: testing
+          script:
+            - echo "Deploying to testing environment"
